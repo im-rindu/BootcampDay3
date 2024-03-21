@@ -27,8 +27,6 @@ public class RemoveString {
             if(!flag)
                 theNewText += theText.charAt(i);
         }
-        System.out.println("The Result : " + theNewText);
-
-    
+        System.out.println("The Result : " + theNewText);    
     }
 }
