@@ -8,6 +8,7 @@ public class RemoveString {
         System.out.print("Input a text you want to remove : ");
         String theTextToDlt = inputScanner.nextLine();
         inputScanner.close();
+        
         String theNewText = "";
 
         for (int i = 0 ; i < theText.length(); i++) {
