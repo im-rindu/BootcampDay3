@@ -6,9 +6,9 @@ public class LoopInput {
         int num = 1;
         String theText = "y";  
         do {
-            System.out.println(num + " (press y to continue)");
+            System.out.print(num + " (press y to continue) ");
             theText = inputScanner.nextLine();  
-            if (theText.equals("y")) {
+            if (theText.equals("y")){
                 num++;
             }
         } while (!theText.equals("n"));

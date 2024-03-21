@@ -8,11 +8,27 @@ public class RemoveString {
         System.out.print("Input a text you want to remove : ");
         String theTextToDlt = inputScanner.nextLine();
         inputScanner.close();
-        String[] splittedText = theText.split(theTextToDlt);
         String theNewText = "";
-        for (int i = 0 ; i < splittedText.length; i++) {
-            theNewText += splittedText[i];
+
+        for (int i = 0 ; i < theText.length(); i++) {
+            boolean flag = false;
+            for(int j = 0; j < theTextToDlt.length(); j++){
+                if(theText.charAt(i+j)==theTextToDlt.charAt(j)){
+                    flag = true;
+                    if(j == theTextToDlt.length()-1 ){
+                        i += theTextToDlt.length()-1;
+                    }
+                }
+                else{
+                    flag = false;
+                    break;
+                }
+            }
+            if(!flag)
+                theNewText += theText.charAt(i);
         }
-        System.out.println("The result : " + theNewText);
+        System.out.println("The Result : " + theNewText);
+
+    
     }
 }
